@@ -178,7 +178,7 @@ html {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 0.3s var(--ease); /* Uses your custom ease variable */
+  transition: all 0.5s var(--ease); /* Uses your custom ease variable */
 }
 
 /* Visible state toggled by JavaScript */
