@@ -155,7 +155,6 @@ body::before {
 html {
   scroll-behavior: smooth;
 }
-
 /* Scroll to Top Button Styles */
 .scroll-top-btn {
   position: fixed;
