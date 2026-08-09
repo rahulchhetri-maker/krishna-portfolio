@@ -151,6 +151,49 @@ body::before {
   will-change: transform;
   backface-visibility: hidden;
 }
+/* Enable smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll to Top Button Styles */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--surface); /* Uses surface color so the arrow contrasts perfectly */
+  border: none;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s var(--ease); /* Uses your custom ease variable */
+}
+
+/* Visible state toggled by JavaScript */
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.scroll-top-btn:hover {
+  background-color: var(--accent-strong);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px); /* Slight lift effect */
+}
 a {
   color: inherit;
   text-decoration: none;

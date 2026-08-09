@@ -195,3 +195,28 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('is-visible'));
   }, 3000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  const aboutSection = document.getElementById("about"); 
+
+  window.addEventListener("scroll", () => {
+    // Check if the 'about' section exists, otherwise default to showing after 500px of scrolling
+    const triggerPoint = aboutSection ? aboutSection.offsetTop : 500;
+
+    // Show button when scrolled to the about section (with a 100px buffer)
+    if (window.scrollY > triggerPoint - 100) { 
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top when clicked
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
