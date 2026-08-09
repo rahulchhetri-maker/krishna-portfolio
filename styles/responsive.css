@@ -29,9 +29,83 @@
   /* Force hidden reveal elements to be visible */
 
 } /*Force all animations and transitions to run globally */
+/* ===== Very small phones ===== */
+@media (max-width: 380px) {
+  .about-text {
+    font-size: 1.05rem;
+  }
 
+  .skill-card h3 {
+    font-size: 1.3rem;
+  }
+}
 
 @media (max-width: 845px) {
+
+    .customization {
+    width: 100%;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .about-card,
+  .skill-card {
+    flex: 1 1 100%;   /* force full-width stacking once they wrap */
+  }
+
+  .about-card {
+    padding-right: 32px;   /* balance left/right now that it's full width */
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .about-grid {
+    padding: 24px 0;
+  }
+
+  .customization {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .about-card {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+    text-align: left;
+  }
+
+  .about-text {
+    padding-top: 1.25rem;
+    font-size: 1.15rem;
+    line-height: 1.55;
+  }
+
+  .skill-card {
+    padding: 24px 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .skill-card ul {
+    gap: 12px;
+  }
+
+  .skill-card ul li {
+    font-size: 1rem;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
   .hero-orbit {
   position: absolute;
   border: 1px solid var(--accent);
