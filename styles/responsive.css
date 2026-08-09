@@ -1,0 +1,410 @@
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-play-state: running !important;
+  }
+
+  /* Re-apply continuous keyframe animations with explicit durations */
+  body {
+    animation: pageFadeIn 0.7s ease-out forwards !important;
+  }
+
+  .profile-frame-wrapper {
+    animation: float 6s ease-in-out infinite !important;
+  }
+
+  .earth {
+    animation: earth-orbit-top 24s linear infinite !important;
+  }
+
+  .mars {
+    animation: mars-orbit-left-reverse 14s linear infinite !important;
+  }
+
+  .earth::after {
+    animation: moon-orbit 4s linear infinite !important;
+  }
+
+  /* Force hidden reveal elements to be visible */
+
+} /*Force all animations and transitions to run globally */
+
+
+@media (max-width: 845px) {
+  .hero-orbit {
+  position: absolute;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.orbit-one {
+  width: 70%;
+  height: 79%;
+  transform: rotate(-12deg);
+}
+.orbit-two {
+  width: 35%;
+  height: 120%;
+  transform: rotate(27deg);
+}
+  .school-name{
+  font-size: 1.2rem;
+  font-weight: 610;
+  }
+  .nav-links-desktop {
+    display: none;
+  }
+  .nav-controls {
+    gap: 0.30rem;
+    margin-left: auto;
+    margin-right: 0.35rem;
+  }
+  .site-menu {
+    display: block;
+  }
+  .theme-toggle {
+    justify-content: center;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+  }
+  .theme-toggle-text {
+    display: none;
+  }
+  .theme-toggle-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  :root[data-theme="light"] .theme-toggle-icon {
+    transform: none;
+  }
+  .site-menu summary {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 0.7rem;
+    color: var(--text);
+    background: var(--surface);
+    cursor: pointer;
+    list-style: none;
+    appearance: none;
+  }
+  .site-menu summary::-webkit-details-marker {
+    display: none;
+  }
+  .site-menu summary::marker {
+    content: "";
+    font-size: 0;
+  }
+  .site-menu[open] summary {
+    color: #fff;
+    background: var(--accent);
+  }
+  .menu-icon {
+    display: grid;
+    gap: 0.28rem;
+    width: 1.1rem;
+  }
+  .menu-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background: currentColor;
+    transform-origin: center;
+    transition:
+      transform 0.25s var(--ease),
+      opacity 0.2s var(--ease);
+  }
+  .site-menu[open] .menu-icon span:nth-child(1) {
+    transform: translateY(0.4rem) rotate(45deg);
+  }
+  .site-menu[open] .menu-icon span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .site-menu[open] .menu-icon span:nth-child(3) {
+    transform: translateY(-0.4rem) rotate(-45deg);
+  }
+  .nav-links-mobile {
+    position: fixed;
+    top: calc(5.2rem + 1rem);
+    left: 50%;
+    width: min(18rem, calc(100vw - 3rem));
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(-50%);
+
+    max-height: calc(100vh - 7.5rem);
+    overflow-y: auto;
+  }
+  .nav-links-mobile a {
+    margin: 0.12rem 0.2rem;
+    padding: 0.8rem;
+    border-radius: 0.55rem;
+  }
+  .nav-links-mobile a:hover {
+    background: var(--accent-soft);
+  }
+  .nav-links-mobile a::after {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-content {
+    order: 2;
+    padding-top: 0;
+  }
+  .hero-visual {
+    order: 1;
+    min-height: 310px;
+    transform: none;
+  }
+  .profile-frame-wrapper {
+    width: min(290px, 63vw);
+  }
+  .about-grid,
+  .contact-shell {
+    grid-template-columns: 1fr;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .card {
+    padding: 1.4rem;
+  }
+  .skill-card,
+  .service-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.85rem;
+    min-height: auto;
+  }
+  .skill-card .card-icon,
+  .service-card .card-icon {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+  }
+  .skill-card h3,
+  .service-card h3 {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+  .skill-card ul,
+  .service-card p,
+  .service-card .text-link {
+    flex-basis: 100%;
+  }
+  .skill-card ul {
+    font-size: 0.85rem;
+    gap: 0.55rem;
+  }
+  .service-card p {
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+  }
+  .content-stack .card:nth-child(2),
+  .achievement-list > div:nth-child(even) {
+    margin-left: 0;
+  }
+  .skill-card:nth-child(2),
+  .skill-card:nth-child(3),
+  .service-card:nth-child(2) {
+    margin-top: 0;
+  }
+  .timeline,
+  .education-card {
+    margin-left: 0;
+  }
+  .timeline::before {
+    left: 0.4rem;
+  }
+  .timeline-marker {
+    left: 0;
+  }
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding-left: 2rem;
+  }
+  .experience-meta {
+    order: -1;
+  }
+  .contact-shell {
+    gap: 2.5rem;
+  }
+  .contact-shell form {
+    padding-top: 0;
+  }
+  .footer-inner {
+    min-height: 2.5rem;
+  }
+}
+@media (max-width: 520px) {
+    .hero-orbit {
+  position: absolute;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.orbit-one {
+  width: 80%;
+  height: 79%;
+  transform: rotate(-12deg);
+}
+.orbit-two {
+  width: 50%;
+  height: 115%;
+  transform: rotate(27deg);
+}
+  .nav-links-desktop {
+    display: none;
+  }
+  .container {
+    width: min(100% - 2rem, 1120px);
+  }
+  .section {
+    padding-block: 3.5rem;
+  }
+  .hero {
+    padding-top: 4.8rem;
+  }
+  .hero-visual {
+    min-height: 255px;
+  }
+  .floating-note {
+    right: 0%;
+    bottom: 3%;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .card {
+    padding: 1.1rem;
+  }
+  .skill-card,
+  .service-card {
+    min-height: auto;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .experience-item h3 {
+    font-size: 1.3rem;
+  }
+  .card-icon,
+  .service-card .card-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    border-radius: 0.3rem;
+  }
+  .skill-card ul {
+    gap: 0.45rem;
+    font-size: 0.83rem;
+  }
+  .skill-card li::before {
+    width: 0.32rem;
+    height: 0.32rem;
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  .service-card p {
+    margin-bottom: 0.85rem;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+  .service-number {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+  }
+  .service-card .text-link {
+    font-size: 0.8rem;
+  }
+  .education-card {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+  .contact-shell {
+    padding: 1.5rem;
+  }
+  .footer-inner {
+    display: grid;
+  }
+}
+@media (max-width: 360px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .container {
+    width: min(100% - 1.5rem, 1120px);
+  }
+  .card {
+    padding: 0.95rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  .card-icon,
+  .service-card .card-icon {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+  }
+  .nav {
+    min-height: 4.65rem;
+  }
+  .logo {
+    font-size: 1.18rem;
+  }
+  .nav-controls {
+    gap: 0.4rem;
+    margin-right: 0.15rem;
+  }
+  .theme-toggle,
+  .site-menu summary {
+    width: 2.3rem;
+    height: 2.3rem;
+    min-width: 2.3rem; /* This stops the width from being stuck at 2.5rem */
+  }
+  .theme-toggle-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .nav-links-mobile {
+    top: calc(4.65rem + 0.75rem);
+  }
+  .hero-visual {
+    min-height: 230px;
+  }
+  .floating-note {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.66rem;
+  }
+}
+
