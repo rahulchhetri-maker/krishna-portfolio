@@ -578,9 +578,9 @@ ul {
 }
 
 .about-text {
-  padding-top: 2rem;
-  font-size: clamp(1.1rem, 1.5vw + 0.8rem, 1.5rem);  /* fluid: shrinks smoothly instead of jumping at breakpoints */
-  font-weight: 700;
+  padding-top: 0rem;
+  font-size: 1.8rem;  /* fluid: shrinks smoothly instead of jumping at breakpoints */
+  font-weight: 800;
   line-height: 1.6;
   margin: 0;
 }
