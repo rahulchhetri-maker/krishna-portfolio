@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (containsAbuse) {
-      showNotification('Please remove inappropriate language from your inputs.', 'error');
+      showNotification('Please use respectful and appropriate language.', 'error');
       return;
     }
 
